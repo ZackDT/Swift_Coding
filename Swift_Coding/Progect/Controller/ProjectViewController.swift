@@ -38,7 +38,7 @@ extension ProjectViewController {
         setupNavBtn()
         
     }
-    
+    /// nav
     private func setupNavBtn() {
         self.navigationItem.titleView = self.titleBtn
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addBtn_Nav"), style: .plain, target: self, action: #selector(addItemClick))
@@ -51,11 +51,11 @@ extension ProjectViewController {
 
 // MARK: - 点击事件
 extension ProjectViewController {
-    @objc func addItemClick() {
-        
+    func addItemClick() {
+        QL1("addItemClick()")
     }
     
-    @objc func fliterClicked(btn: UIButton) {
-        
+    func fliterClicked(btn: UIButton) {
+        QL1("fliterClicked")
     }
 }

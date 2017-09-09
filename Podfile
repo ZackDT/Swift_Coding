@@ -12,7 +12,7 @@ pod 'Kingfisher'
 pod 'HandyJSON'
 pod 'RxSwift'
 pod 'RxCocoa'
-
+pod 'Whisper'
 
   # Pods for Swift_Coding
 

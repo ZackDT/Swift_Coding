@@ -32,7 +32,14 @@
 		4A1DF2F11F62EDE9005A29BA /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF2F01F62EDE9005A29BA /* UIButton+Extension.swift */; };
 		4A1DF2F31F62EFB0005A29BA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF2F21F62EFB0005A29BA /* UIColor+Extensions.swift */; };
 		4A1DF2F51F62F31B005A29BA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF2F41F62F31B005A29BA /* String+Extensions.swift */; };
-		4A1DF2FD1F638D21005A29BA /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF2FC1F638D21005A29BA /* iCarousel.m */; };
+		4A1DF3001F63CF86005A29BA /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF2FF1F63CF86005A29BA /* iCarousel.m */; };
+		4A1DF3071F63DDFA005A29BA /* SwiftNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF3051F63DDFA005A29BA /* SwiftNotificationCenter.swift */; };
+		4A1DF3081F63DDFA005A29BA /* WeakObjectSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF3061F63DDFA005A29BA /* WeakObjectSet.swift */; };
+		4A1DF30B1F63DE53005A29BA /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF30A1F63DE53005A29BA /* Toast.swift */; };
+		4A1DF3111F63DF62005A29BA /* CDAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF30D1F63DF62005A29BA /* CDAlertHeaderView.swift */; };
+		4A1DF3121F63DF62005A29BA /* CDAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF30E1F63DF62005A29BA /* CDAlertView.swift */; };
+		4A1DF3131F63DF62005A29BA /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF30F1F63DF62005A29BA /* ImageHelper.swift */; };
+		4A1DF3141F63DF62005A29BA /* LayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DF3101F63DF62005A29BA /* LayoutConstraintsExtension.swift */; };
 		72B88A6281AC2257009EC2B1 /* Pods_Swift_Coding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1709FB33194FE8BEA18DBE /* Pods_Swift_Coding.framework */; };
 		7DCF79B31A75D85A7186F3FD /* Pods_Swift_CodingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EB5EFEA48ED7D322725521 /* Pods_Swift_CodingTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +80,7 @@
 		4A1DF20D1F62890A005A29BA /* Swift_CodingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_CodingUITests.swift; sourceTree = "<group>"; };
 		4A1DF20F1F62890A005A29BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1DF2411F628B24005A29BA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		4A1DF2441F628B8D005A29BA /* QorumLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QorumLogs.swift; path = PrintTool/QorumLogs.swift; sourceTree = "<group>"; };
+		4A1DF2441F628B8D005A29BA /* QorumLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QorumLogs.swift; path = ../Tools/PrintTool/QorumLogs.swift; sourceTree = "<group>"; };
 		4A1DF2461F628FAD005A29BA /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		4A1DF2481F62982F005A29BA /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		4A1DF24A1F62983A005A29BA /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +88,7 @@
 		4A1DF24E1F62984E005A29BA /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		4A1DF2501F62985A005A29BA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A1DF2521F6298E3005A29BA /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		4A1DF2541F62ADB4005A29BA /* ODRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODRefreshControl.swift; sourceTree = "<group>"; };
+		4A1DF2541F62ADB4005A29BA /* ODRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODRefreshControl.swift; path = ../Tools/ODRefreshControl.swift; sourceTree = "<group>"; };
 		4A1DF2561F62B02A005A29BA /* Kingfisher+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Extension.swift"; sourceTree = "<group>"; };
 		4A1DF2571F62B02A005A29BA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		4A1DF2D01F62E822005A29BA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -90,8 +97,15 @@
 		4A1DF2F21F62EFB0005A29BA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		4A1DF2F41F62F31B005A29BA /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4A1DF2F61F6389C6005A29BA /* Swift_Coding-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Swift_Coding-Bridging-Header.h"; path = "Progect/Controller/Swift_Coding-Bridging-Header.h"; sourceTree = "<group>"; };
-		4A1DF2FB1F638D21005A29BA /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		4A1DF2FC1F638D21005A29BA /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		4A1DF2FE1F63CF86005A29BA /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		4A1DF2FF1F63CF86005A29BA /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		4A1DF3051F63DDFA005A29BA /* SwiftNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotificationCenter.swift; sourceTree = "<group>"; };
+		4A1DF3061F63DDFA005A29BA /* WeakObjectSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObjectSet.swift; sourceTree = "<group>"; };
+		4A1DF30A1F63DE53005A29BA /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4A1DF30D1F63DF62005A29BA /* CDAlertHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAlertHeaderView.swift; sourceTree = "<group>"; };
+		4A1DF30E1F63DF62005A29BA /* CDAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAlertView.swift; sourceTree = "<group>"; };
+		4A1DF30F1F63DF62005A29BA /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		4A1DF3101F63DF62005A29BA /* LayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintsExtension.swift; sourceTree = "<group>"; };
 		5A55B3DB29297849A96A1530 /* Pods-Swift_Coding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Coding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Coding/Pods-Swift_Coding.debug.xcconfig"; sourceTree = "<group>"; };
 		62327FE16B72F3984B7E6F23 /* Pods-Swift_CodingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_CodingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_CodingUITests/Pods-Swift_CodingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78578D15546CB2494C4C79A6 /* Pods-Swift_Coding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Coding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Coding/Pods-Swift_Coding.release.xcconfig"; sourceTree = "<group>"; };
@@ -454,8 +468,6 @@
 			isa = PBXGroup;
 			children = (
 				4A1DF2EA1F62EB1C005A29BA /* Common.swift */,
-				4A1DF2441F628B8D005A29BA /* QorumLogs.swift */,
-				4A1DF2541F62ADB4005A29BA /* ODRefreshControl.swift */,
 				4A1DF2561F62B02A005A29BA /* Kingfisher+Extension.swift */,
 				4A1DF2571F62B02A005A29BA /* NetworkTools.swift */,
 				4A1DF2CF1F62E7DE005A29BA /* Extenson */,
@@ -507,6 +519,11 @@
 		4A1DF23F1F628A07005A29BA /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				4A1DF2441F628B8D005A29BA /* QorumLogs.swift */,
+				4A1DF2541F62ADB4005A29BA /* ODRefreshControl.swift */,
+				4A1DF30C1F63DF62005A29BA /* CDAlertView */,
+				4A1DF3091F63DE53005A29BA /* Toast */,
+				4A1DF3041F63DDFA005A29BA /* SwiftNotificationCenter */,
 				4A1DF2FA1F638D21005A29BA /* iCarousel */,
 			);
 			path = Vender;
@@ -534,10 +551,38 @@
 		4A1DF2FA1F638D21005A29BA /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				4A1DF2FB1F638D21005A29BA /* iCarousel.h */,
-				4A1DF2FC1F638D21005A29BA /* iCarousel.m */,
+				4A1DF2FE1F63CF86005A29BA /* iCarousel.h */,
+				4A1DF2FF1F63CF86005A29BA /* iCarousel.m */,
 			);
 			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		4A1DF3041F63DDFA005A29BA /* SwiftNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DF3051F63DDFA005A29BA /* SwiftNotificationCenter.swift */,
+				4A1DF3061F63DDFA005A29BA /* WeakObjectSet.swift */,
+			);
+			path = SwiftNotificationCenter;
+			sourceTree = "<group>";
+		};
+		4A1DF3091F63DE53005A29BA /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DF30A1F63DE53005A29BA /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		4A1DF30C1F63DF62005A29BA /* CDAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DF30D1F63DF62005A29BA /* CDAlertHeaderView.swift */,
+				4A1DF30E1F63DF62005A29BA /* CDAlertView.swift */,
+				4A1DF30F1F63DF62005A29BA /* ImageHelper.swift */,
+				4A1DF3101F63DF62005A29BA /* LayoutConstraintsExtension.swift */,
+			);
+			path = CDAlertView;
 			sourceTree = "<group>";
 		};
 		79D32466F87B756971DB18B8 /* Frameworks */ = {
@@ -836,13 +881,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1DF2591F62B02A005A29BA /* NetworkTools.swift in Sources */,
-				4A1DF2FD1F638D21005A29BA /* iCarousel.m in Sources */,
+				4A1DF30B1F63DE53005A29BA /* Toast.swift in Sources */,
+				4A1DF3131F63DF62005A29BA /* ImageHelper.swift in Sources */,
+				4A1DF3001F63CF86005A29BA /* iCarousel.m in Sources */,
 				4A1DF1F01F62890A005A29BA /* ViewController.swift in Sources */,
 				4A1DF24F1F62984E005A29BA /* MessageViewController.swift in Sources */,
+				4A1DF3081F63DDFA005A29BA /* WeakObjectSet.swift in Sources */,
 				4A1DF2F11F62EDE9005A29BA /* UIButton+Extension.swift in Sources */,
 				4A1DF2511F62985A005A29BA /* ProfileViewController.swift in Sources */,
 				4A1DF24B1F62983A005A29BA /* TaskViewController.swift in Sources */,
 				4A1DF2551F62ADB4005A29BA /* ODRefreshControl.swift in Sources */,
+				4A1DF3111F63DF62005A29BA /* CDAlertHeaderView.swift in Sources */,
 				4A1DF2F31F62EFB0005A29BA /* UIColor+Extensions.swift in Sources */,
 				4A1DF1EE1F62890A005A29BA /* AppDelegate.swift in Sources */,
 				4A1DF2D11F62E822005A29BA /* UIBarButtonItem+Extension.swift in Sources */,
@@ -850,6 +899,9 @@
 				4A1DF2581F62B02A005A29BA /* Kingfisher+Extension.swift in Sources */,
 				4A1DF2531F6298E3005A29BA /* BaseTabBarController.swift in Sources */,
 				4A1DF2F51F62F31B005A29BA /* String+Extensions.swift in Sources */,
+				4A1DF3071F63DDFA005A29BA /* SwiftNotificationCenter.swift in Sources */,
+				4A1DF3141F63DF62005A29BA /* LayoutConstraintsExtension.swift in Sources */,
+				4A1DF3121F63DF62005A29BA /* CDAlertView.swift in Sources */,
 				4A1DF24D1F629844005A29BA /* TweetViewController.swift in Sources */,
 				4A1DF2EB1F62EB1C005A29BA /* Common.swift in Sources */,
 				4A1DF2421F628B24005A29BA /* BaseViewController.swift in Sources */,
