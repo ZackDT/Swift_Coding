@@ -125,3 +125,94 @@ extension String {
     }
 
 }
+
+// MARK: - 加密用部分
+extension String {
+    
+    func sha1() -> String {
+        //UnsafeRawPointer
+        let data = self.data(using: String.Encoding.utf8)!
+        var digest = [UInt8](repeating: 0, count:Int(CC_SHA1_DIGEST_LENGTH))
+        
+        let newData = NSData.init(data: data)
+        CC_SHA1(newData.bytes, CC_LONG(data.count), &digest)
+        let output = NSMutableString(capacity: Int(CC_SHA1_DIGEST_LENGTH))
+        for byte in digest {
+            output.appendFormat("%02x", byte)
+        }
+        return output as String
+    }
+    
+    func md5() -> String {
+        let cStr = self.cString(using: String.Encoding.utf8);
+        let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16)
+        CC_MD5(cStr!,(CC_LONG)(strlen(cStr!)), buffer)
+        let md5String = NSMutableString();
+        for i in 0 ..< 16{
+            md5String.appendFormat("%02x", buffer[i])
+        }
+        free(buffer)
+        return md5String as String
+        
+    }
+    
+    /// md5加密
+    var MD5: String {
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        CC_MD5(str!, strLen, result)
+        let hash = NSMutableString()
+        for i in 0 ..< digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        result.deinitialize()
+        return String(format: hash as String)
+        
+    }
+    
+    /// base64解码
+    var base64Decode: String {
+        let decodeData = Data(base64Encoded: self, options: .init(rawValue: 0))
+        return String(data: decodeData!, encoding: .utf8)!
+    }
+    
+    /// base编码
+    var base64Encode: String {
+        let data = self.data(using: .utf8)
+        return (data?.base64EncodedString(options: .init(rawValue: 0)))!
+    }
+    
+    /// URLEncode  URL编码  Alamofire
+    var urlEncode: String {
+        /*
+         :用于分隔协议和主机，/用于分隔主机和路径，?用于分隔路径和查询参数, #用于分隔查询与碎片
+         */
+        let generalDelimitersToEncode = ":#[]@"
+        //组件中的分隔符：如=用于表示查询参数中的键值对，&符号用于分隔查询多个键值对
+        let subDelimitersToEncode = "!$&'()*+,;="
+        var allowedCharacterSet = CharacterSet.urlQueryAllowed
+        allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
+        var escaped = ""
+        
+        let batchSize = 50  //一次转义的字符数
+        var index = self.startIndex
+        
+        while index != self.endIndex {
+            let startIndex = index
+            let endIndex = self.index(index, offsetBy: batchSize, limitedBy: self.endIndex) ?? self.endIndex
+            let range = startIndex..<endIndex
+            
+            let substring = self.substring(with: range)
+            
+            escaped += substring.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? substring
+            
+            index = endIndex
+        }
+        return escaped
+    }
+    
+    
+}
+

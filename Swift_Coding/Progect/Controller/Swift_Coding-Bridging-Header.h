@@ -3,3 +3,11 @@
 //
 
 #import "iCarousel.h"
+
+// 加密相关
+#import <CommonCrypto/CommonDigest.h>
+
+// MARK: - OC控件
+#import "SMPageControl.h"
+
+#import "YYText.h"

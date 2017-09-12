@@ -12,6 +12,11 @@ import UIKit
 // MARK: - 初始化方法
 extension UIButton {
     
+    convenience init(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, target: AnyObject, action: Selector) {
+        self.init(frame: CGRect(x: x, y: y, width: w, height: h))
+        addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+    }
+    
     /// 返回按钮
     ///
     /// - Parameters:
