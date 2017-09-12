@@ -72,7 +72,7 @@ extension UserDefaults {
     static func userInfo() -> AccountModel? {
         let userInfoStr = UserDefaults.LoginInfo.string(forKey: .userInfo)
         if userInfoStr == nil {
-            let accountModel = JSONDeserializer<AccountModel>.deserializeFrom(json: userInfoStr, designatedPath: nil)
+            let accountModel = JSONDeserializer<AccountModel>.deserializeFrom(json: userInfoStr, designatedPath: "data")
             return accountModel
         }else {
             return nil

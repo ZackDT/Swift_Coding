@@ -8,6 +8,8 @@ PODS:
     - RxSwift (~> 3.0)
   - RxSwift (3.0.1)
   - SnapKit (3.0.2)
+  - Spring (1.0.3)
+  - Whisper (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -18,6 +20,18 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SnapKit
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - Whisper
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
@@ -28,7 +42,9 @@ SPEC CHECKSUMS:
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: 896a24f312b43c995bc8ad6b199710f2eb9b59f4
+PODFILE CHECKSUM: 102402074394e7bc2250487ef09a5ef934f93dbf
 
 COCOAPODS: 1.1.1

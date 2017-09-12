@@ -34,7 +34,7 @@ extension BaseTabBarController {
     private func addChildViewController(vc: UIViewController, title: String, imageName: String, selectedImage: String) {
         vc.title = title
         vc.tabBarItem.image = UIImage(named: imageName)
-        vc.tabBarItem.selectedImage = UIImage(named: selectedImage)
+        vc.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
         let nav = BaseNavigationController(rootViewController: vc)
         addChildViewController(nav)
     }

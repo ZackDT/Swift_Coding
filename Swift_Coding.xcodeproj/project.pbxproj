@@ -147,6 +147,11 @@
 		4AEA4F0B1F66A3DC00F30B4B /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F0A1F66A3DC00F30B4B /* AccountModel.swift */; };
 		4AEA4F0D1F66A72000F30B4B /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F0C1F66A72000F30B4B /* Dictionary+Extension.swift */; };
 		4AEA4F0F1F66A79400F30B4B /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F0E1F66A79400F30B4B /* Array+Extensions.swift */; };
+		4AEA4F111F676BD300F30B4B /* NotificationCenterTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F101F676BD300F30B4B /* NotificationCenterTools.swift */; };
+		4AEA4F131F67720600F30B4B /* Broadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F121F67720600F30B4B /* Broadcast.swift */; };
+		4AEA4F8D1F67BA8F00F30B4B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F8C1F67BA8F00F30B4B /* UIViewController+Extensions.swift */; };
+		4AEA4F8F1F67BC8800F30B4B /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F8E1F67BC8800F30B4B /* UIAlertController+Extensions.swift */; };
+		4AEA4F911F67BCE500F30B4B /* UISlider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4F901F67BCE500F30B4B /* UISlider+Extensions.swift */; };
 		72B88A6281AC2257009EC2B1 /* Pods_Swift_Coding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1709FB33194FE8BEA18DBE /* Pods_Swift_Coding.framework */; };
 		7DCF79B31A75D85A7186F3FD /* Pods_Swift_CodingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EB5EFEA48ED7D322725521 /* Pods_Swift_CodingTests.framework */; };
 /* End PBXBuildFile section */
@@ -347,6 +352,11 @@
 		4AEA4F0A1F66A3DC00F30B4B /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		4AEA4F0C1F66A72000F30B4B /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		4AEA4F0E1F66A79400F30B4B /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		4AEA4F101F676BD300F30B4B /* NotificationCenterTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTools.swift; sourceTree = "<group>"; };
+		4AEA4F121F67720600F30B4B /* Broadcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Broadcast.swift; sourceTree = "<group>"; };
+		4AEA4F8C1F67BA8F00F30B4B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		4AEA4F8E1F67BC8800F30B4B /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		4AEA4F901F67BCE500F30B4B /* UISlider+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+Extensions.swift"; sourceTree = "<group>"; };
 		5A55B3DB29297849A96A1530 /* Pods-Swift_Coding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Coding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Coding/Pods-Swift_Coding.debug.xcconfig"; sourceTree = "<group>"; };
 		62327FE16B72F3984B7E6F23 /* Pods-Swift_CodingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_CodingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_CodingUITests/Pods-Swift_CodingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78578D15546CB2494C4C79A6 /* Pods-Swift_Coding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Coding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Coding/Pods-Swift_Coding.release.xcconfig"; sourceTree = "<group>"; };
@@ -498,6 +508,7 @@
 			children = (
 				4A26599E1F64EBD0009E9263 /* UIButton+Style.swift */,
 				4A26599F1F64EBD0009E9263 /* String+Coding.swift */,
+				4AEA4F121F67720600F30B4B /* Broadcast.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -724,6 +735,7 @@
 				4A1DF2561F62B02A005A29BA /* Kingfisher+Extension.swift */,
 				4A1DF2571F62B02A005A29BA /* NetworkTools.swift */,
 				4A2659881F64D533009E9263 /* UserDefaultTools.swift */,
+				4AEA4F101F676BD300F30B4B /* NotificationCenterTools.swift */,
 				4A1DF2CF1F62E7DE005A29BA /* Extenson */,
 			);
 			path = Tools;
@@ -814,6 +826,9 @@
 				4AEA4EAA1F66A10700F30B4B /* CGRect+Extensions.swift */,
 				4AEA4F0C1F66A72000F30B4B /* Dictionary+Extension.swift */,
 				4AEA4F0E1F66A79400F30B4B /* Array+Extensions.swift */,
+				4AEA4F8C1F67BA8F00F30B4B /* UIViewController+Extensions.swift */,
+				4AEA4F8E1F67BC8800F30B4B /* UIAlertController+Extensions.swift */,
+				4AEA4F901F67BCE500F30B4B /* UISlider+Extensions.swift */,
 			);
 			path = Extenson;
 			sourceTree = "<group>";
@@ -1420,12 +1435,14 @@
 				4A2659891F64D533009E9263 /* UserDefaultTools.swift in Sources */,
 				4A2659971F64E99B009E9263 /* UIImageView+Extensions.swift in Sources */,
 				4AEA4E781F66902600F30B4B /* YYTextLayout.m in Sources */,
+				4AEA4F131F67720600F30B4B /* Broadcast.swift in Sources */,
 				4A1DF2551F62ADB4005A29BA /* ODRefreshControl.swift in Sources */,
 				4A1DF3111F63DF62005A29BA /* CDAlertHeaderView.swift in Sources */,
 				4AEA4E9D1F66903E00F30B4B /* SMPageControl.m in Sources */,
 				4AEA4EA51F66903E00F30B4B /* CHIPageControlPuya.swift in Sources */,
 				4AEA4EA41F66903E00F30B4B /* CHIPageControlPaprika.swift in Sources */,
 				4A1DF2F31F62EFB0005A29BA /* UIColor+Extensions.swift in Sources */,
+				4AEA4F911F67BCE500F30B4B /* UISlider+Extensions.swift in Sources */,
 				4A1DF1EE1F62890A005A29BA /* AppDelegate.swift in Sources */,
 				4A1DF2D11F62E822005A29BA /* UIBarButtonItem+Extension.swift in Sources */,
 				4A2659951F64E930009E9263 /* LoginHeaderAndFooterView.swift in Sources */,
@@ -1452,10 +1469,13 @@
 				4AEA4E731F66902600F30B4B /* YYTextContainerView.m in Sources */,
 				4A1DF3121F63DF62005A29BA /* CDAlertView.swift in Sources */,
 				4AEA4E3B1F668F4E00F30B4B /* RegisterViewController.swift in Sources */,
+				4AEA4F8F1F67BC8800F30B4B /* UIAlertController+Extensions.swift in Sources */,
 				4AEA4E811F66902600F30B4B /* NSAttributedString+YYText.m in Sources */,
 				4AEA4E801F66902600F30B4B /* YYTextRunDelegate.m in Sources */,
 				4AEA4EA81F66903E00F30B4B /* CHIPageControllable.swift in Sources */,
 				4A2659991F64EA11009E9263 /* UIView+Extensions.swift in Sources */,
+				4AEA4F111F676BD300F30B4B /* NotificationCenterTools.swift in Sources */,
+				4AEA4F8D1F67BA8F00F30B4B /* UIViewController+Extensions.swift in Sources */,
 				4AEA4E7F1F66902600F30B4B /* YYTextRubyAnnotation.m in Sources */,
 				4A1DF24D1F629844005A29BA /* TweetViewController.swift in Sources */,
 				4AEA4E761F66902600F30B4B /* YYTextInput.m in Sources */,

@@ -44,10 +44,7 @@ extension ProjectViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "addBtn_Nav"), style: .plain, target: self, action: #selector(addItemClick))
     }
     
-    
-
 }
-
 
 // MARK: - 点击事件
 extension ProjectViewController {

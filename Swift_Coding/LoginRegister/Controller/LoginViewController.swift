@@ -131,8 +131,11 @@ extension LoginViewController {
     }
     // 登录
     @objc fileprivate func logoBtnClick() {
-        loginVM.login(rv.username.value, rv.password.value) { isSuccess in
+        loginVM.login(rv.username.value, rv.password.value) { [weak self] isSuccess in
             if isSuccess {
+                self?.navigationController?.dismiss(animated: false, completion: {
+                    Broadcast.postNotification(.changeRootViewController)
+                })
                 
             }
             

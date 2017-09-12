@@ -38,7 +38,7 @@ extension LoginViewModel {
                 guard let jsonString = resultDict.formatJSON() else { return }
                 if let accountModel = JSONDeserializer<AccountModel>.deserializeFrom(json: jsonString, designatedPath: "data")  {
                     UserDefaults.LoginInfo.set(value: accountModel.global_key, forKey: .token)
-//                    UserDefaults.LoginInfo.set(value: resultDict["data"], forKey: .userInfo)
+                    UserDefaults.LoginInfo.set(value: jsonString, forKey: .userInfo)
                     completion(true)
                 }
                 

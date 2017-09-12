@@ -50,12 +50,9 @@ public let kNavTitleFontSize :CGFloat = 18
 
 
 /// 全局的外观设置颜色
-public let WBAppearanceTinColor = UIColor.orange   // 系统主色
+
 public let myBlackColr = UIColor(hex: 0x424243)    //常用的黑色
 public let mygrayColor = UIColor(hex: 0xb2b2b2)    //常用的灰色
-
-public let MiaoSysColor =  UIColor(r: 41, g: 182, b: 107)//
-
 
 // MARK: - 颜色
 public let kColorNavBG = UIColor(hex: 0xF8F8F8)
