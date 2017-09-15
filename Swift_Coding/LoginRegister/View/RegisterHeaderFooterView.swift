@@ -23,7 +23,7 @@ class RegisterHeaderView: UIView {
     }
     
     fileprivate func setupUI() {
-        let label = UILabel(title: "加入Coding，体验云端开发之美！", size: CGRect(x: 0, y: 0, width: kScreenW, height: 18), fontSize: 18, color: kColor222, alignment: .center)
+        let label = UILabel(title: "加入Coding，体验云端开发之美！", frame: CGRect(x: 0, y: 0, width: kScreenW, height: 18), fontSize: 18, color: kColor222, alignment: .center)
         label.center = self.center
         addSubview(label)
     }

@@ -29,6 +29,34 @@ class ProjectViewController: BaseViewController {
         return btn
     }()
     
+    fileprivate lazy var myCarousel: iCarousel = {
+        let icarousel = iCarousel()
+        icarousel.type = .linear
+        icarousel.delegate = self
+        icarousel.dataSource = self
+        icarousel.decelerationRate = 1.0
+        icarousel.scrollSpeed = 1.0
+        icarousel.isPagingEnabled = true
+        icarousel.clipsToBounds = true
+        icarousel.bounceDistance = 0.2
+        icarousel.isScrollEnabled = false;
+        return icarousel
+    }()
+    
+    fileprivate lazy var myPopMenu: PopMenu = {
+       let menu = PopMenu(frame: CGRect(x: 0, y: 64, w: kScreenW, h: kScreenH - 64), items: self.menuItems)
+        return menu
+    }()
+    
+    fileprivate lazy var menuItems:Array<MenuItem> = [
+        MenuItem(title: "项目", iconImage: "pop_Project", glowColor: UIColor.gray, index: 0),
+        MenuItem(title: "任务", iconImage: "pop_Task", glowColor: UIColor.gray, index: 1),
+        MenuItem(title: "冒泡", iconImage: "pop_Tweet", glowColor: UIColor.gray, index: 2),
+        MenuItem(title: "添加好友", iconImage: "pop_User", glowColor: UIColor.gray, index: 3),
+        MenuItem(title: "私信", iconImage: "pop_Message", glowColor: UIColor.gray, index: 4),
+        MenuItem(title: "两步验证", iconImage: "pop_2FA", glowColor: UIColor.gray, index: 5)
+        ]
+    
 }
 
 
@@ -36,6 +64,11 @@ class ProjectViewController: BaseViewController {
 extension ProjectViewController {
     fileprivate func setupUI() {
         setupNavBtn()
+    
+        view.addSubview(myCarousel)
+        myCarousel.snp.makeConstraints { (make) in
+            make.edges.equalTo(UIEdgeInsetsMake(64, 0, 44, 0))
+        }
         
     }
     /// nav
@@ -46,10 +79,22 @@ extension ProjectViewController {
     
 }
 
+extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return segmentItems.count
+    }
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let randomV = UIView()
+        randomV.backgroundColor = UIColor.random()
+        randomV.frame = carousel.bounds
+        return randomV
+    }
+}
+
 // MARK: - 点击事件
 extension ProjectViewController {
     func addItemClick() {
-        QL1("addItemClick()")
+        myPopMenu.show(self.view)
     }
     
     func fliterClicked(btn: UIButton) {

@@ -103,6 +103,24 @@ extension UIFont {
             print(name)
         }
     }
+    
+    
+    /// 建议使用这个，根据系统变化字体的大小
+    ///
+    /// - Parameter size: 字体设计大小
+    /// - Returns: 变化之后的字体  systemFont(ofSize fontSize: CGFloat) -> UIFont
+    public class func sysfont(ofSize fontSize: CGFloat) -> UIFont {
+        let suggestSize = UIDevice().fontSizeForDevice(fontSize)
+        let font = UIFont.systemFont(ofSize: suggestSize)
+        return font
+    }
+    
+    
+    
+    
 }
+    
+    
+
 
 #endif

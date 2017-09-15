@@ -13,6 +13,7 @@ pod 'HandyJSON'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Whisper'
+pod 'RealmSwift'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 
   # Pods for Swift_Coding

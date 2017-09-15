@@ -29,7 +29,7 @@ extension UILabel {
         text = title
         //界面设计上，避免使用纯黑色.默认值
         textColor = color
-        font = UIFont.systemFont(ofSize: fontSize!)
+        font = UIFont.sysfont(ofSize: fontSize!)
         numberOfLines = 0
         if screenInset == 0 {
             textAlignment = .center
@@ -50,18 +50,18 @@ extension UILabel {
     ///   - fontSize: 字体尺寸，默认是14
     ///   - color: 颜色，默认是黑色
     ///   - alignment: 默认left
-    convenience init(title: String,
-                     size: CGRect? = nil,
+    convenience init(title: String?,
+                     frame: CGRect? = nil,
                      fontSize: CGFloat = 14,
                      color: UIColor? = myBlackColr,
                      alignment:NSTextAlignment?) {
         self.init()
         self.text = title
-        self.font = UIFont.systemFont(ofSize: fontSize)
+        self.font = UIFont.sysfont(ofSize: fontSize)
         self.textColor = color
         self.textAlignment = alignment ?? .left
-        if size != nil {
-            self.frame = size!
+        if frame != nil {
+            self.frame = frame!
         }else {
             self.sizeToFit()
         }
@@ -155,7 +155,7 @@ extension UILabel {
     }
     
     public func font(_ font: CGFloat) {
-        self.font = UIFont.systemFont(ofSize: font)
+        self.font = UIFont.sysfont(ofSize: font)
     }
     
 }
