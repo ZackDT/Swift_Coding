@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+/// 委托
 @objc protocol BlurViewProtocol: class {
     @objc optional func willShowBlurView();
     @objc optional func didShowBlurView();
@@ -133,7 +135,7 @@ extension BlurView {
         
         self.alpha = 0.0
         containerView.insertSubview(self, at: 0)
-        UIView.animate(withDuration: Double(self.showDuration), delay: 0, options: .curveEaseInOut, animations: { 
+        UIView.animate(withDuration: Double(self.showDuration), delay: 0, options: .curveEaseInOut, animations: {
             self.alpha = 1.0
         }) { (finished) in
             self.showed = true
@@ -145,7 +147,7 @@ extension BlurView {
     fileprivate func hidedenAnimation() {
         self.delegate?.willDismissBlurView?()
         
-        UIView.animate(withDuration: Double(self.dismissDuration), delay: 0, options: .curveEaseInOut, animations: { 
+        UIView.animate(withDuration: Double(self.dismissDuration), delay: 0.3, options: .curveEaseInOut, animations: {
             self.alpha = 0.0
         }) { (finished) in
             self.showed = false

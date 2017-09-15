@@ -3,6 +3,7 @@ PODS:
   - HandyJSON (1.4.0)
   - IQKeyboardManagerSwift (4.0.8)
   - Kingfisher (3.2.4)
+  - pop (1.0.9)
   - RazzleDazzle (0.1.5)
   - Realm (2.1.2):
     - Realm/Headers (= 2.1.2)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
+  - pop (~> 1.0)
   - RazzleDazzle
   - RealmSwift
   - RxCocoa
@@ -44,6 +46,7 @@ SPEC CHECKSUMS:
   HandyJSON: 8aa98b0ece8c5f7a9042bccd33b0254448704bcb
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
   Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   RazzleDazzle: 0b1b9fc8ceed04bfdd4b3e8182e98ef7edacd1d1
   Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
   RealmSwift: 17d6ee30b6f9df86364408c2197492e33bfea567
@@ -53,6 +56,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: 2d3f775d73086dc6194fe928ddcd1dd630507f64
+PODFILE CHECKSUM: 9ef4c0b00c59c80652aa607685be42d3554a2da8
 
 COCOAPODS: 1.1.1

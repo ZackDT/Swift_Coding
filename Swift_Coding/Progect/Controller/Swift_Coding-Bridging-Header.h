@@ -11,3 +11,4 @@
 #import "SMPageControl.h"
 
 #import "YYText.h"
+#import <POP/POP.h>

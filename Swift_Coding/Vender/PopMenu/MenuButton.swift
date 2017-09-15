@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Spring
+
 import SnapKit
 
 struct MenuItem {
@@ -19,7 +19,7 @@ struct MenuItem {
 }
 
 /// MenuButton 菜单视图 UIView  处理点击事件等
-class MenuButton: SpringView {
+class MenuButton: UIView {
     
     // MARK: - 暴露的属性
     var selectedItemCompletedBlock: ((_ item:MenuItem) -> ())?
@@ -93,5 +93,13 @@ extension MenuButton {
         
         self.titleLabel.centerX = self.bounds.midX
         self.addSubview(self.titleLabel)
+        
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.itemClickedMethod))
+        self.addGestureRecognizer(gesture)
+        
+    }
+    
+    func itemClickedMethod(){
+        self.selectedItemCompletedBlock?(self.menuItem)
     }
 }

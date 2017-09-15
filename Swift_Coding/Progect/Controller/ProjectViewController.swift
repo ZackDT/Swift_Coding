@@ -64,7 +64,12 @@ class ProjectViewController: BaseViewController {
 extension ProjectViewController {
     fileprivate func setupUI() {
         setupNavBtn()
-    
+        
+        myPopMenu.selectedItemBlock = { [weak self] item in
+            self?.myPopMenu.dismiss()
+            QL1(item)
+        }
+        
         view.addSubview(myCarousel)
         myCarousel.snp.makeConstraints { (make) in
             make.edges.equalTo(UIEdgeInsetsMake(64, 0, 44, 0))
@@ -85,7 +90,7 @@ extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
     }
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let randomV = UIView()
-        randomV.backgroundColor = UIColor.random()
+//        randomV.backgroundColor = UIColor.random()
         randomV.frame = carousel.bounds
         return randomV
     }
@@ -94,7 +99,13 @@ extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
 // MARK: - 点击事件
 extension ProjectViewController {
     func addItemClick() {
-        myPopMenu.show(self.view)
+        if !myPopMenu.isShowed {
+            myPopMenu.show(self.view)
+        } else {
+            myPopMenu.dismiss()
+        }
+        
+        
     }
     
     func fliterClicked(btn: UIButton) {

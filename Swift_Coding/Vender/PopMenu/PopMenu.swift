@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Spring
+import pop
 
 enum PopMenuAnimationType: Int {
     case sina = 0  /** 从下部入 下部出*/
@@ -19,7 +19,7 @@ private let MenuButtonHeight: Float = 110
 private let MenuButtonHorizontalMargin: Float = 10.0
 private let MenuButtonVerticalPadding: Float = 10.0
 private let kMenuButtonBaseTag:Int = 100
-
+private let MenuItemAnimationInterval:Double = 0.02
 /// 菜单栏
 class PopMenu: UIView {
     // MARK: - 暴露的属性
@@ -40,34 +40,22 @@ class PopMenu: UIView {
     }()
     
     // MARK: - 暴露的方法
-    
     /// 容器dismiss
     func dismiss() {
-        UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseInOut, animations: { 
-            self.alpha = 0.0
-        }) { (finished) in
-            self.removeFromSuperview()
-        }
+        blurView.dismiss()
     }
     
     /// 将菜单显示到某个视图上
     ///
     /// - Parameter atView: 要显示的父视图
     func show(_ containerView:UIView) {
-        self.startPoint = CGPoint(x: 0, y: self.h)
-        self.endPoint = self.startPoint
-        if(self.isShowed){
+        if(isShowed){
             return
         }
-        self.clipsToBounds = true
+        clipsToBounds = true
         containerView.addSubview(self)
-        self.blurView.show(atView: self)
+        blurView.show(atView: self)
     }
-    
-    func show(atView containerView: UIView, startPoint: CGPoint, endPoint: CGPoint) {
-       
-    }
-    
     
     init(frame: CGRect, items: Array<MenuItem>) {
         super.init(frame: frame)
@@ -105,20 +93,23 @@ extension PopMenu {
         let itemWidth:Float = (Float(self.bounds.size.width) - (Float(self.perRowItemCount + 1) * MenuButtonHorizontalMargin)) / Float(perRowItemCount);
         for i in 0..<self.items.count {
             let item = self.items[i]
-            var menuBtn = self.viewWithTag(kMenuButtonBaseTag + i) as? SpringView
+            var menuBtn = self.viewWithTag(kMenuButtonBaseTag + i) as? MenuButton
             let toRect:CGRect = getFrameOfItem(AtIndex: i, itemWidth: itemWidth)
-            let fromRect = toRect
+            var fromRect = toRect
             
+            fromRect.y = -100
             if menuBtn == nil {
                 menuBtn = MenuButton(frame: fromRect, item: item)
                 menuBtn!.tag = kMenuButtonBaseTag + i
+                menuBtn?.selectedItemCompletedBlock = { [weak self] item in
+                    self?.selectedItemBlock?(item)
+                }
                 self.addSubview(menuBtn!)
             }else {
                 menuBtn?.frame = fromRect
             }
-            
-//            let delaySec = Double(items.count - i) * (0.1 / 5.0)
-//            animation(to: toRect, from: fromRect, atView: menuBtn!, beginTime: delaySec)
+            let delaySec = Double(items.count - i) * MenuItemAnimationInterval
+            animation(to: toRect, from: fromRect, atView: menuBtn!, beginTime: delaySec)
             
         }
 
@@ -127,10 +118,18 @@ extension PopMenu {
     
     /// 隐藏菜单按钮
     fileprivate func hideButtons() {
-        
+        for i in 0..<items.count {
+            let menuBtn = self.viewWithTag(kMenuButtonBaseTag + i) as! MenuButton
+            let fromRect:CGRect = menuBtn.frame
+            var toRect:CGRect = fromRect
+            
+            toRect.y = -100
+            let delayInSeconds:Double = Double(i) * MenuItemAnimationInterval
+            animation(to: toRect, from: fromRect, atView: menuBtn, beginTime: delayInSeconds)
+        }
     }
     
-    func getFrameOfItem(AtIndex index:Int, itemWidth:Float) -> CGRect {
+    fileprivate func getFrameOfItem(AtIndex index:Int, itemWidth:Float) -> CGRect {
 
         let insetY:Float = Float(kScreenH) * 0.12
         // 计算行位置
@@ -142,11 +141,16 @@ extension PopMenu {
         return itemFrame;
     }
     
-    private func animation(to: CGRect, from: CGRect, atView: SpringView, beginTime: Double) {
-        atView.delay = CGFloat(beginTime)
-        atView.y = frame.y
-        atView.animation = "slideDown"
-        atView.curve = "easeInOut"
-        atView.animate()
+    private func animation(to: CGRect, from: CGRect, atView: UIView, beginTime: Double) {
+        let anim = POPSpringAnimation()
+        anim.property = POPAnimatableProperty.property(withName: kPOPViewFrame) as! POPAnimatableProperty
+        anim.removedOnCompletion = true
+        anim.beginTime = beginTime + CACurrentMediaTime()
+        anim.springBounciness = 6
+        anim.springSpeed = 2
+        anim.toValue = NSValue(cgRect: to)
+        anim.fromValue = NSValue(cgRect: from)
+        atView.pop_add(anim, forKey: "POPSpringAnimationKey")
+        
     }
 }

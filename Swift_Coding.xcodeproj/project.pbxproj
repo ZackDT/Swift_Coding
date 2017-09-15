@@ -53,6 +53,7 @@
 		4A2659A01F64EBD0009E9263 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A26599E1F64EBD0009E9263 /* UIButton+Style.swift */; };
 		4A2659A11F64EBD0009E9263 /* String+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A26599F1F64EBD0009E9263 /* String+Coding.swift */; };
 		4A61A7D71F6A991D00337C0A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7D61F6A991D00337C0A /* BlurView.swift */; };
+		4A61A7E31F6BB36700337C0A /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */; };
 		4AEA4E2C1F66898500F30B4B /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2B1F66898500F30B4B /* RegisterTableViewCell.swift */; };
 		4AEA4E2E1F668B4400F30B4B /* PhoneCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2D1F668B4400F30B4B /* PhoneCodeButton.swift */; };
 		4AEA4E301F668B6E00F30B4B /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2F1F668B6E00F30B4B /* UILabel+Extensions.swift */; };
@@ -178,6 +179,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4A61A7DB1F6B7D5200337C0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		02B089D9C5588F6EC169865C /* Pods-Swift_CodingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_CodingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_CodingTests/Pods-Swift_CodingTests.release.xcconfig"; sourceTree = "<group>"; };
 		0A1709FB33194FE8BEA18DBE /* Pods_Swift_Coding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Coding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +250,7 @@
 		4A26599E1F64EBD0009E9263 /* UIButton+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		4A26599F1F64EBD0009E9263 /* String+Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Coding.swift"; sourceTree = "<group>"; };
 		4A61A7D61F6A991D00337C0A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
 		4AEA4E2B1F66898500F30B4B /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
 		4AEA4E2D1F668B4400F30B4B /* PhoneCodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeButton.swift; sourceTree = "<group>"; };
 		4AEA4E2F1F668B6E00F30B4B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
@@ -747,6 +762,7 @@
 				4A1DF2571F62B02A005A29BA /* NetworkTools.swift */,
 				4A2659881F64D533009E9263 /* UserDefaultTools.swift */,
 				4AEA4F101F676BD300F30B4B /* NotificationCenterTools.swift */,
+				4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */,
 				4A1DF2CF1F62E7DE005A29BA /* Extenson */,
 			);
 			path = Tools;
@@ -1101,6 +1117,7 @@
 				4A1DF1E81F62890A005A29BA /* Resources */,
 				DE8473825BB8138C11D757B7 /* [CP] Embed Pods Frameworks */,
 				6339365083D6D8A4262E708A /* [CP] Copy Pods Resources */,
+				4A61A7DB1F6B7D5200337C0A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1495,6 +1512,7 @@
 				4AEA4E731F66902600F30B4B /* YYTextContainerView.m in Sources */,
 				4A1DF3121F63DF62005A29BA /* CDAlertView.swift in Sources */,
 				4AEA4E3B1F668F4E00F30B4B /* RegisterViewController.swift in Sources */,
+				4A61A7E31F6BB36700337C0A /* NibLoadableProtocol.swift in Sources */,
 				4AEA4F8F1F67BC8800F30B4B /* UIAlertController+Extensions.swift in Sources */,
 				4AEA4E811F66902600F30B4B /* NSAttributedString+YYText.m in Sources */,
 				4AEA4E801F66902600F30B4B /* YYTextRunDelegate.m in Sources */,
