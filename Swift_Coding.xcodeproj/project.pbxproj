@@ -54,6 +54,8 @@
 		4A2659A11F64EBD0009E9263 /* String+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A26599F1F64EBD0009E9263 /* String+Coding.swift */; };
 		4A61A7D71F6A991D00337C0A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7D61F6A991D00337C0A /* BlurView.swift */; };
 		4A61A7E31F6BB36700337C0A /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */; };
+		4A61A7E61F6BB4B200337C0A /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E41F6BB4B200337C0A /* Shakeable.swift */; };
+		4A61A7E71F6BB4B200337C0A /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E51F6BB4B200337C0A /* UIViewAnimation.swift */; };
 		4AEA4E2C1F66898500F30B4B /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2B1F66898500F30B4B /* RegisterTableViewCell.swift */; };
 		4AEA4E2E1F668B4400F30B4B /* PhoneCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2D1F668B4400F30B4B /* PhoneCodeButton.swift */; };
 		4AEA4E301F668B6E00F30B4B /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA4E2F1F668B6E00F30B4B /* UILabel+Extensions.swift */; };
@@ -251,6 +253,8 @@
 		4A26599F1F64EBD0009E9263 /* String+Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Coding.swift"; sourceTree = "<group>"; };
 		4A61A7D61F6A991D00337C0A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
+		4A61A7E41F6BB4B200337C0A /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
+		4A61A7E51F6BB4B200337C0A /* UIViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation.swift; sourceTree = "<group>"; };
 		4AEA4E2B1F66898500F30B4B /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
 		4AEA4E2D1F668B4400F30B4B /* PhoneCodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeButton.swift; sourceTree = "<group>"; };
 		4AEA4E2F1F668B6E00F30B4B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
@@ -763,6 +767,8 @@
 				4A2659881F64D533009E9263 /* UserDefaultTools.swift */,
 				4AEA4F101F676BD300F30B4B /* NotificationCenterTools.swift */,
 				4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */,
+				4A61A7E41F6BB4B200337C0A /* Shakeable.swift */,
+				4A61A7E51F6BB4B200337C0A /* UIViewAnimation.swift */,
 				4A1DF2CF1F62E7DE005A29BA /* Extenson */,
 			);
 			path = Tools;
@@ -1524,6 +1530,7 @@
 				4AEA4E7F1F66902600F30B4B /* YYTextRubyAnnotation.m in Sources */,
 				4A1DF24D1F629844005A29BA /* TweetViewController.swift in Sources */,
 				4AEA4E761F66902600F30B4B /* YYTextInput.m in Sources */,
+				4A61A7E61F6BB4B200337C0A /* Shakeable.swift in Sources */,
 				4A1DF2EB1F62EB1C005A29BA /* Common.swift in Sources */,
 				4AEA4E771F66902600F30B4B /* YYTextKeyboardManager.m in Sources */,
 				4AEA4E841F66902600F30B4B /* UIView+YYText.m in Sources */,
@@ -1533,6 +1540,7 @@
 				4A1DF2421F628B24005A29BA /* BaseViewController.swift in Sources */,
 				4A1DF2471F628FAD005A29BA /* BaseNavigationController.swift in Sources */,
 				4A1DF2451F628B8D005A29BA /* QorumLogs.swift in Sources */,
+				4A61A7E71F6BB4B200337C0A /* UIViewAnimation.swift in Sources */,
 				4AEA4EA71F66903E00F30B4B /* CHILayer.swift in Sources */,
 				4AEA4E301F668B6E00F30B4B /* UILabel+Extensions.swift in Sources */,
 			);

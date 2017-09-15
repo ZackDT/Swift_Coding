@@ -57,6 +57,7 @@ class ProjectViewController: BaseViewController {
         MenuItem(title: "两步验证", iconImage: "pop_2FA", glowColor: UIColor.gray, index: 5)
         ]
     
+    
 }
 
 
@@ -90,7 +91,7 @@ extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
     }
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let randomV = UIView()
-//        randomV.backgroundColor = UIColor.random()
+        randomV.backgroundColor = UIColor.random()
         randomV.frame = carousel.bounds
         return randomV
     }
@@ -104,8 +105,6 @@ extension ProjectViewController {
         } else {
             myPopMenu.dismiss()
         }
-        
-        
     }
     
     func fliterClicked(btn: UIButton) {
