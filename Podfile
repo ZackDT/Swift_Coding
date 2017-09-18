@@ -16,6 +16,7 @@ pod 'Whisper'
 pod 'RealmSwift'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 pod 'pop', '~> 1.0'
+pod 'SwiftyJSON'
   # Pods for Swift_Coding
 
   target 'Swift_CodingTests' do

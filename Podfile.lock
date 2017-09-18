@@ -15,6 +15,7 @@ PODS:
   - RxSwift (3.0.1)
   - SnapKit (3.0.2)
   - Spring (1.0.3)
+  - SwiftyJSON (3.1.3)
   - Whisper (4.0.0)
 
 DEPENDENCIES:
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - RxSwift
   - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftyJSON
   - Whisper
 
 EXTERNAL SOURCES:
@@ -54,8 +56,9 @@ SPEC CHECKSUMS:
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: 9ef4c0b00c59c80652aa607685be42d3554a2da8
+PODFILE CHECKSUM: a6d4816194deaaab9ae4bc43a76069e26dcc986d
 
 COCOAPODS: 1.1.1

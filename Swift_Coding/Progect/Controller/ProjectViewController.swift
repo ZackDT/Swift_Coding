@@ -8,13 +8,28 @@
 
 import UIKit
 
+
+/// 项目首页
 class ProjectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        myFliterMenu.refreshMenu()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if myPopMenu.isShowed {
+            myPopMenu.dismiss()
+        }
+        if myFliterMenu.showStatus {
+            myFliterMenu.dismiss()
+        }
     }
     
     // MARK: -  懒加载
@@ -29,6 +44,9 @@ class ProjectViewController: BaseViewController {
         return btn
     }()
     
+    /// 缓存字典
+    fileprivate var cacheDict = [String: ProjectListViewController]()
+    /// 分页视图
     fileprivate lazy var myCarousel: iCarousel = {
         let icarousel = iCarousel()
         icarousel.type = .linear
@@ -39,15 +57,15 @@ class ProjectViewController: BaseViewController {
         icarousel.isPagingEnabled = true
         icarousel.clipsToBounds = true
         icarousel.bounceDistance = 0.2
-        icarousel.isScrollEnabled = false;
+//        icarousel.isScrollEnabled = false
         return icarousel
     }()
-    
+    /// 筛选视图
     fileprivate lazy var myPopMenu: PopMenu = {
        let menu = PopMenu(frame: CGRect(x: 0, y: 64, w: kScreenW, h: kScreenH - 64), items: self.menuItems)
         return menu
     }()
-    
+    /// pop视图
     fileprivate lazy var menuItems:Array<MenuItem> = [
         MenuItem(title: "项目", iconImage: "pop_Project", glowColor: UIColor.gray, index: 0),
         MenuItem(title: "任务", iconImage: "pop_Task", glowColor: UIColor.gray, index: 1),
@@ -56,7 +74,18 @@ class ProjectViewController: BaseViewController {
         MenuItem(title: "私信", iconImage: "pop_Message", glowColor: UIColor.gray, index: 4),
         MenuItem(title: "两步验证", iconImage: "pop_2FA", glowColor: UIColor.gray, index: 5)
         ]
-    
+    /// 筛选视图
+    fileprivate lazy var myFliterMenu: PopFilterMenu = {
+       let menu = PopFilterMenu(frame: CGRect(x: 0, y: 64, w: kScreenW, h: kScreenH - 64), items: self.fliterItems)
+        return menu
+    }()
+    fileprivate lazy var fliterItems:Array<ProjectType> = [
+        ProjectType(name: "全部项目", type: "all"),
+        ProjectType(name: "我创建的", type: "created"),
+        ProjectType(name: "我参与的", type: "joined"),
+        ProjectType(name: "我关注的", type: "stared"),
+        ProjectType(name: "我收藏的", type: "stared"),
+    ]
     
 }
 
@@ -66,14 +95,20 @@ extension ProjectViewController {
     fileprivate func setupUI() {
         setupNavBtn()
         
+        
+        automaticallyAdjustsScrollViewInsets = false
+        view.addSubview(myCarousel)
+        myCarousel.snp.makeConstraints { (make) in
+            make.edges.equalTo(UIEdgeInsetsMake(64, 0, 0, 0))
+        }
+        
         myPopMenu.selectedItemBlock = { [weak self] item in
             self?.myPopMenu.dismiss()
             QL1(item)
         }
-        
-        view.addSubview(myCarousel)
-        myCarousel.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(64, 0, 44, 0))
+        myFliterMenu.clickBlock = { [weak self] selectNum in
+            QL1(selectNum)
+            self?.myCarousel.scrollToItem(at: selectNum, animated: false)
         }
         
     }
@@ -85,15 +120,23 @@ extension ProjectViewController {
     
 }
 
+// MARK: - iCarouselDelegate, iCarouselDataSource
 extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in carousel: iCarousel) -> Int {
         return segmentItems.count
     }
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let randomV = UIView()
-        randomV.backgroundColor = UIColor.random()
-        randomV.frame = carousel.bounds
-        return randomV
+        var listCtl:ProjectListViewController
+        let key = String(index)
+        if cacheDict.keys.contains(key) {
+            listCtl = cacheDict[key]!
+        }else {
+            listCtl = ProjectListViewController()
+            addChildViewController(listCtl)
+            listCtl.view.frame = carousel.frame
+            cacheDict[key] = listCtl
+        }
+        return listCtl.view
     }
 }
 
@@ -108,6 +151,14 @@ extension ProjectViewController {
     }
     
     func fliterClicked(btn: UIButton) {
-        QL1("fliterClicked")
+        if myPopMenu.isShowed {
+            myPopMenu.dismiss()
+        }
+        if !myFliterMenu.showStatus {
+            myFliterMenu.show(atView: self.view)
+        } else {
+            myFliterMenu.dismiss()
+        }
+        
     }
 }
