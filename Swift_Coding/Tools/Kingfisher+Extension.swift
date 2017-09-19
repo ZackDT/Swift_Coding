@@ -12,7 +12,7 @@ import Kingfisher
 
 // MARK: - 对KingFisher的扩展
 extension UIImageView {
-    func setImage(_ URLString : String?, _ placeHolderName : String? = nil) {
+    func setImage(_ URLString : String?, _ placeHolderName : UIImage? = nil) {
         guard let URLString = URLString else {
             return
         }
@@ -25,7 +25,7 @@ extension UIImageView {
             kf.setImage(with: url)
             return
         }
-        
-        kf.setImage(with: url, placeholder : UIImage(named: placeHolderName))
+        QL1(url)
+        kf.setImage(with: url, placeholder : placeHolderName)
     }
 }

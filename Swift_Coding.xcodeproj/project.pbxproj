@@ -56,6 +56,8 @@
 		4A3813471F6FA07700F72EA4 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3813461F6FA07700F72EA4 /* ProjectListViewController.swift */; };
 		4A3813491F6FAB4600F72EA4 /* ProjectListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3813481F6FAB4600F72EA4 /* ProjectListCell.swift */; };
 		4A38134F1F6FB58F00F72EA4 /* ODRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38134E1F6FB58F00F72EA4 /* ODRefreshControl.swift */; };
+		4A3813661F70B31C00F72EA4 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3813651F70B31C00F72EA4 /* ProjectModel.swift */; };
+		4A3813681F70BAE000F72EA4 /* CodingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3813671F70BAE000F72EA4 /* CodingCommon.swift */; };
 		4A61A7D71F6A991D00337C0A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7D61F6A991D00337C0A /* BlurView.swift */; };
 		4A61A7E31F6BB36700337C0A /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */; };
 		4A61A7E61F6BB4B200337C0A /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61A7E41F6BB4B200337C0A /* Shakeable.swift */; };
@@ -259,6 +261,8 @@
 		4A3813461F6FA07700F72EA4 /* ProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		4A3813481F6FAB4600F72EA4 /* ProjectListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListCell.swift; sourceTree = "<group>"; };
 		4A38134E1F6FB58F00F72EA4 /* ODRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODRefreshControl.swift; sourceTree = "<group>"; };
+		4A3813651F70B31C00F72EA4 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		4A3813671F70BAE000F72EA4 /* CodingCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingCommon.swift; sourceTree = "<group>"; };
 		4A61A7D61F6A991D00337C0A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		4A61A7E21F6BB36700337C0A /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
 		4A61A7E41F6BB4B200337C0A /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
@@ -546,6 +550,7 @@
 				4A26599E1F64EBD0009E9263 /* UIButton+Style.swift */,
 				4A26599F1F64EBD0009E9263 /* String+Coding.swift */,
 				4AEA4F121F67720600F30B4B /* Broadcast.swift */,
+				4A3813671F70BAE000F72EA4 /* CodingCommon.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3813441F6F75E900F72EA4 /* ProjectCount.swift */,
+				4A3813651F70B31C00F72EA4 /* ProjectModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1469,6 +1475,7 @@
 				4A26598D1F64E420009E9263 /* RegisterViewModel.swift in Sources */,
 				4AEA4E751F66902600F30B4B /* YYTextEffectWindow.m in Sources */,
 				4AEA4F0B1F66A3DC00F30B4B /* AccountModel.swift in Sources */,
+				4A3813661F70B31C00F72EA4 /* ProjectModel.swift in Sources */,
 				4AEA4FB81F6834F000F30B4B /* MenuButton.swift in Sources */,
 				4AEA4FB11F67F78700F30B4B /* PopFilterMenu.swift in Sources */,
 				4A1DF30B1F63DE53005A29BA /* Toast.swift in Sources */,
@@ -1517,6 +1524,7 @@
 				4AEA4E861F66902600F30B4B /* YYTextTransaction.m in Sources */,
 				4AEA4E851F66902600F30B4B /* YYTextAsyncLayer.m in Sources */,
 				4A26599D1F64EB14009E9263 /* CGFloat+Extensions.swift in Sources */,
+				4A3813681F70BAE000F72EA4 /* CodingCommon.swift in Sources */,
 				4AEA4E9E1F66903E00F30B4B /* CHIPageControlAji.swift in Sources */,
 				4A1DF2581F62B02A005A29BA /* Kingfisher+Extension.swift in Sources */,
 				4A1DF2531F6298E3005A29BA /* BaseTabBarController.swift in Sources */,

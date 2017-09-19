@@ -192,7 +192,11 @@ extension PopFilterMenu: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.clickBlock?(indexPath.row)
+        var selectInt = indexPath.row
+        if indexPath.section == 1 {
+            selectInt = 3 + indexPath.row
+        }
+        self.clickBlock?(selectInt)
         dismiss()
     }
 }

@@ -94,8 +94,7 @@ class ProjectViewController: BaseViewController {
 extension ProjectViewController {
     fileprivate func setupUI() {
         setupNavBtn()
-        
-        
+    
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(myCarousel)
         myCarousel.snp.makeConstraints { (make) in
@@ -132,8 +131,8 @@ extension ProjectViewController: iCarouselDelegate, iCarouselDataSource {
             listCtl = cacheDict[key]!
         }else {
             listCtl = ProjectListViewController()
-            addChildViewController(listCtl)
             listCtl.view.frame = carousel.frame
+            addChildViewController(listCtl)
             cacheDict[key] = listCtl
         }
         return listCtl.view
